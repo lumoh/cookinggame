@@ -1,0 +1,439 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6513236580560008464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -376, y: -168}
+  ports:
+    keys:
+    - PrevStates
+    - NextState
+    values:
+    - _fieldName: PrevStates
+      _node: {fileID: -6513236580560008464}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 6890713262598756974}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: NextState
+      _node: {fileID: -6513236580560008464}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: 5988170760473584745}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Raw
+  StateSprite: {fileID: 0}
+--- !u!114 &-3635151455734706303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -56}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: -3635151455734706303}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: -3635151455734706303}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 5812670753081037541}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Burned
+  StateSprite: {fileID: 0}
+--- !u!114 &-1386689430236958809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 568, y: -328}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: -1386689430236958809}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: 6404551841126176563}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: -1386689430236958809}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 7710357741756165881}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Chocolate
+  StateSprite: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db52dfcc6d2a4961bba0165034e9e5d, type: 3}
+  m_Name: DonutGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6513236580560008464}
+  - {fileID: 5988170760473584745}
+  - {fileID: 5812670753081037541}
+  - {fileID: 7710357741756165881}
+  - {fileID: -3635151455734706303}
+  - {fileID: -1386689430236958809}
+  - {fileID: 1750699958499076479}
+  - {fileID: 6404551841126176563}
+  - {fileID: 6890713262598756974}
+--- !u!114 &1750699958499076479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 568, y: -184}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 1750699958499076479}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: 1750699958499076479}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 7710357741756165881}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Strawberry
+  StateSprite: {fileID: 0}
+--- !u!114 &5812670753081037541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 72, y: -168}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 5812670753081037541}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: 7710357741756165881}
+        reroutePoints: []
+      - fieldName: PrevStates
+        node: {fileID: -3635151455734706303}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: 5812670753081037541}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 5988170760473584745}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Cooked
+  StateSprite: {fileID: 0}
+--- !u!114 &5988170760473584745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -152, y: -168}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 5988170760473584745}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: 5812670753081037541}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: 5988170760473584745}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: -6513236580560008464}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Cooking
+  StateSprite: {fileID: 0}
+--- !u!114 &6404551841126176563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: -328}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 6404551841126176563}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: 6404551841126176563}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: -1386689430236958809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Coconut
+  StateSprite: {fileID: 0}
+--- !u!114 &6890713262598756974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7e82384c60a4fb6ab942f18c84f809, type: 3}
+  m_Name: Food
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -616, y: -168}
+  ports:
+    keys:
+    - NextState
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 6890713262598756974}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: -6513236580560008464}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  FoodName: Donut
+  FoodSprite: {fileID: 0}
+--- !u!114 &7710357741756165881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8530aa78dc0b41dc98c1d788649c915, type: 3}
+  m_Name: Food State
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -248}
+  ports:
+    keys:
+    - NextState
+    - PrevStates
+    values:
+    - _fieldName: NextState
+      _node: {fileID: 7710357741756165881}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.FoodNodes.FoodStateNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: PrevStates
+        node: {fileID: -1386689430236958809}
+        reroutePoints: []
+      - fieldName: PrevStates
+        node: {fileID: 1750699958499076479}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: PrevStates
+      _node: {fileID: 7710357741756165881}
+      _typeQualifiedName: XNode.FoodNodes.FoodStateNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: NextState
+        node: {fileID: 5812670753081037541}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NextState: []
+  PrevStates: {fileID: 0}
+  StateName: Plain
+  StateSprite: {fileID: 0}

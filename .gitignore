@@ -1,0 +1,6 @@
+Library/*
+Temp/*
+.DS_store
+*.csproj
+.vs/
+obj/
